@@ -2,4 +2,8 @@
     "python.terminal.executeInFileDir": true,
     "python.terminal.activateEnvironment": true,
     "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.defaultInterpreterPath": ".venv/bin/python",
+    "cSpell.words": [
+        "pygame"
+    ]
 }
