@@ -1,7 +1,7 @@
 
 import pygame
 
-from gui import displaySize, colors
+from gui import displaySize, colors, __title__, __version__, drawBoard
 from gui import eventManager
 
 
@@ -11,9 +11,8 @@ def main() -> None:
 
     viewPort = pygame.display.set_mode(displaySize)
     manager = eventManager.eventManager(viewPort)
-    viewPort.fill(colors.black)
-    pygame.display.update()
-    pygame.display.set_caption("Just Another Snake Game")
+    drawBoard(manager)
+    pygame.display.set_caption(f'{__title__} - {__version__}')
 
     while not manager.isGameOver():
         for event in pygame.event.get():
