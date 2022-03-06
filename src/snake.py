@@ -1,7 +1,7 @@
 
-from typing import List
 import pygame
-from gui import window_width, window_height, red
+
+from gui import displaySize, colors
 from gui import eventManager
 
 
@@ -9,8 +9,9 @@ def main() -> None:
     
     pygame.init()
 
-    viewPort = pygame.display.set_mode((window_width, window_height))
-    manager = eventManager(viewPort)
+    viewPort = pygame.display.set_mode(displaySize)
+    manager = eventManager.eventManager(viewPort)
+    viewPort.fill(colors.black)
     pygame.display.update()
     pygame.display.set_caption("Just Another Snake Game")
 

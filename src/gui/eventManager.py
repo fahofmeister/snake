@@ -1,13 +1,15 @@
 
 # Event manager
 
+from tkinter.messagebox import NO
 import pygame
 from pygame import Surface
 from gui.guiObjects import snake, food, counter
 
 class eventManager():
 
-    def __init__(self, dis: Surface) -> None:
+    def __init__(self, display: Surface) -> None:
+        self._display = display
         self._snake = snake((250, 250))
         self._score = counter((10, 10))
         self._gameOver = False
