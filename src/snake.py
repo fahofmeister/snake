@@ -17,6 +17,7 @@ def main() -> None:
     while not manager.isGameOver():
         for event in pygame.event.get():
             manager.checkEvent(event)
+            drawBoard(manager)
 
 
 if __name__ == "__main__":
